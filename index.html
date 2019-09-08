@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularz rejestracyjny</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        form {
+            width: 80%;
+            background: lightgrey;
+            border-radius: 20px;
+            padding: 50px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <form>
+        <h1 class="form-group">Rejestracja</h1>
+        <div class="form-group">
+            <label for="firstName" class="active">Imię</label>
+           <p> <input type="text" id="firstName" name="first-name" placeholder="Wpisz imię" class="form-control"></p>
+        </div>
+        <div class="form-group">
+            <label for="lastName" class="active">Nazwisko</label>
+            <p><input type="text" id="lastName" name="lastName" placeholder="Wpisz nazwisko" class="form-control"></p>
+        </div>
+
+        <fieldset class="form-group">
+            <div class="row">
+                <legend class="col-form-label col-sm-2 pt-0">Płeć</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="mezczyznaRadio" id="mezczyznaRadio" value="mezczyzna" checked>
+                        <label class="form-check-label" for="mezczyznaRadio">Mężczyzna</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="kobietaRadio" id="kobietaRadio" value="kobieta">
+                        <label class="form-check-label" for="kobietaRadio">Kobieta</label>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <div class="form-group">
+            <label for="email" class="active">Adres e-mail</label>
+            <p><input type="email" id="email" name="email" placeholder="Wpisz adres e-mail" class="form-control"></p>
+        </div>
+
+        <div class="form-group">
+            <label for="pass" class="active">Hasło</label>
+            <p><input type="password" id="pass" name="pass" placeholder="Hasło" class="form-control"></p>
+            <p style="font-size: 10px">Min. 8 znaków</p>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="city" class="active">Miasto</label>
+                <input type="text" id="city" name="city" class="form-control">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="province" class="active">Miasto</label>
+                <select id="province" class="form-control" name="province">
+                    <option value="" disabled selected hidden>Wybierz...</option>
+                    <option value="1">dolnoślaskie</option>
+                    <option value="2">lubuskie</option>
+                    <option value="3">małopolskie</option>
+                    <option value="4">mazowieckie</option>
+                    <option value="5">opolskie</option>
+                </select>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="code" class="select">Kod pocztowy</label>
+                <input type="text" id="code" name="code" class="form-control">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="termCheck">
+                <label class="form-check-label" for="termCheck">Akceptuję <a href="http://www.google.pl" target="_blank">regulamin</a> </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="marketingCheck" checked>
+                <label class="form-check-label" for="marketingCheck">Wyrażam zgodę na otrzymywanie informacji makretingowych</label>
+            </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Rejestruj</button>
+    </form>
+</div>
+
+</body>
+</html>
